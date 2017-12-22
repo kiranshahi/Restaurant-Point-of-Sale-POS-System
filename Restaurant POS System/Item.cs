@@ -10,6 +10,6 @@ namespace Restaurant_POS_System
     {
         public int SN { get; set; }
         public string ItemName { get; set; }
-        public int ItemPrice { get; set; }
+        public decimal ItemPrice { get; set; }
     }
 }

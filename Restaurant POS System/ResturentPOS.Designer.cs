@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.menuGrid = new System.Windows.Forms.DataGridView();
             this.sn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,21 +39,21 @@
             this.lblItemPrice = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // menuGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.menuGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.menuGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sn,
             this.itemName,
             this.itemPrice});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 70);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(777, 388);
-            this.dataGridView1.TabIndex = 0;
+            this.menuGrid.Location = new System.Drawing.Point(3, 70);
+            this.menuGrid.Name = "menuGrid";
+            this.menuGrid.RowHeadersVisible = false;
+            this.menuGrid.Size = new System.Drawing.Size(777, 388);
+            this.menuGrid.TabIndex = 0;
             // 
             // sn
             // 
@@ -166,10 +166,11 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtItemPrice);
             this.Controls.Add(this.txtItemName);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.menuGrid);
             this.Name = "ResturentPOS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resurent Point of Sale";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,7 +178,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView menuGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn sn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemPrice;
