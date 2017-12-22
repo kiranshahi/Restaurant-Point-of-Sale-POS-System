@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Restaurant_POS_System
 {
-    public partial class Form1 : Form
+    public partial class ResturentPOS : Form
     {
-        public Form1()
+        public ResturentPOS()
         {
             InitializeComponent();
         }
