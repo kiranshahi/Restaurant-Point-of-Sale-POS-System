@@ -16,5 +16,10 @@ namespace Restaurant_POS_System
         {
             InitializeComponent();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
