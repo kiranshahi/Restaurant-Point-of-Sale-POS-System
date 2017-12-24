@@ -105,19 +105,20 @@ namespace Restaurant_POS_System
                 }
         }
 
-        public void addItemToGrid(Item item)
+        public void addItemToGrid(object sender, IdentityEventArgs e)
         {
             int count = menuGrid.Rows.Count - 1;
             menuGrid.Rows.Add();
             menuGrid.Rows[count].Cells[0].Value = count + 1;
-            menuGrid.Rows[count].Cells[1].Value = item.ItemName;
-            menuGrid.Rows[count].Cells[2].Value = item.ItemPrice;
+            menuGrid.Rows[count].Cells[1].Value = e.item.ItemName;
+            menuGrid.Rows[count].Cells[2].Value = e.item.ItemPrice;
         }
 
         private void addItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddItem addForm = new AddItem();
-            addForm.Show();
+            addForm.IdentityUpdate += new AddItem.IdentityHandler(this.addItemToGrid);
+            addForm.ShowDialog();
         }
     }
 }
