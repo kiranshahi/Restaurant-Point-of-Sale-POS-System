@@ -13,13 +13,6 @@ namespace Restaurant_POS_System
             InitializeComponent();
         }
 
-
-
-        private void btnImport_Click(object sender, EventArgs e)
-        {
-            importData();
-        }
-
         private void importData()
         {
             using (OpenFileDialog openDialog = new OpenFileDialog()
@@ -148,17 +141,43 @@ namespace Restaurant_POS_System
                 addItem.IdentityUpdate += new AddItem.IdentityHandler(this.updateMenu);
                 addItem.Show();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         public void updateMenu(object sender, IdentityEventArgs e)
         {
             menuGrid.Rows[row].Cells[1].Value = e.item.ItemName;
             menuGrid.Rows[row].Cells[2].Value = e.item.ItemPrice;
+        }
+
+        private void closeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("You are about to close the system. Do you want to close?", "Resturent POS System", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void importToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            importData();
+        }
+
+        private void generateBillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<Item> itemList = new List<Item>();
+            for (int i = 0; i < menuGrid.Rows.Count - 1; i++)
+            {
+                int SN = Convert.ToInt32(menuGrid.Rows[i].Cells[0].Value);
+                string ItemName = menuGrid.Rows[i].Cells[1].Value.ToString();
+                decimal ItemPrice = Convert.ToDecimal(menuGrid.Rows[i].Cells[2].Value);
+                itemList.Add(new Item() { SN = SN, ItemName = ItemName, ItemPrice = ItemPrice });
+            }
+
+            GenerateBill billObj = new GenerateBill(itemList);
+            billObj.Show();
         }
     }
 }
