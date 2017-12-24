@@ -7,6 +7,7 @@ namespace Restaurant_POS_System
 {
     public partial class ResturentPOS : Form
     {
+        private int row;
         public ResturentPOS()
         {
             InitializeComponent();
@@ -131,6 +132,33 @@ namespace Restaurant_POS_System
             {
                 MessageBox.Show("Something went wrong while deleting menu item.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Item itemObj = new Item();
+                row = menuGrid.CurrentCell.RowIndex;
+                itemObj.ItemName = menuGrid.Rows[row].Cells[1].Value.ToString();
+                itemObj.ItemPrice = Convert.ToDecimal(menuGrid.Rows[row].Cells[2].Value);
+
+                AddItem addItem = new AddItem();
+                addItem.loadData(itemObj);
+                addItem.IdentityUpdate += new AddItem.IdentityHandler(this.updateMenu);
+                addItem.Show();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public void updateMenu(object sender, IdentityEventArgs e)
+        {
+            menuGrid.Rows[row].Cells[1].Value = e.item.ItemName;
+            menuGrid.Rows[row].Cells[2].Value = e.item.ItemPrice;
         }
     }
 }

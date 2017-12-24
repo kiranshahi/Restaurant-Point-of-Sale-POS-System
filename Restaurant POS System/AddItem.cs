@@ -37,5 +37,12 @@ namespace Restaurant_POS_System
         {
             this.Close();
         }
+
+        public void loadData(Item item)
+        {
+            txtItemName.Text = item.ItemName;
+            txtItemPrice.Text = item.ItemPrice.ToString();
+            btnSave.Text = "Update";
+        }
     }
 }
