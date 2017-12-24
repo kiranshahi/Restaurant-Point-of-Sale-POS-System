@@ -32,27 +32,28 @@
             this.sn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtItemName = new System.Windows.Forms.TextBox();
-            this.txtItemPrice = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.lblItemName = new System.Windows.Forms.Label();
-            this.lblItemPrice = new System.Windows.Forms.Label();
             this.btnImport = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.menuGrid)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuGrid
             // 
+            this.menuGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.menuGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.menuGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sn,
             this.itemName,
             this.itemPrice});
-            this.menuGrid.Location = new System.Drawing.Point(3, 70);
+            this.menuGrid.Location = new System.Drawing.Point(-2, 27);
             this.menuGrid.Name = "menuGrid";
             this.menuGrid.RowHeadersVisible = false;
-            this.menuGrid.Size = new System.Drawing.Size(777, 388);
+            this.menuGrid.Size = new System.Drawing.Size(789, 431);
             this.menuGrid.TabIndex = 0;
             // 
             // sn
@@ -73,57 +74,6 @@
             this.itemPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.itemPrice.HeaderText = "Price";
             this.itemPrice.Name = "itemPrice";
-            // 
-            // txtItemName
-            // 
-            this.txtItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemName.Location = new System.Drawing.Point(7, 35);
-            this.txtItemName.Name = "txtItemName";
-            this.txtItemName.Size = new System.Drawing.Size(300, 29);
-            this.txtItemName.TabIndex = 1;
-            // 
-            // txtItemPrice
-            // 
-            this.txtItemPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemPrice.Location = new System.Drawing.Point(339, 35);
-            this.txtItemPrice.Name = "txtItemPrice";
-            this.txtItemPrice.Size = new System.Drawing.Size(300, 29);
-            this.txtItemPrice.TabIndex = 2;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(83)))));
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(678, 35);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(97, 28);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // lblItemName
-            // 
-            this.lblItemName.AutoSize = true;
-            this.lblItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemName.Location = new System.Drawing.Point(7, 8);
-            this.lblItemName.Name = "lblItemName";
-            this.lblItemName.Size = new System.Drawing.Size(101, 24);
-            this.lblItemName.TabIndex = 4;
-            this.lblItemName.Text = "Item Name";
-            // 
-            // lblItemPrice
-            // 
-            this.lblItemPrice.AutoSize = true;
-            this.lblItemPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemPrice.Location = new System.Drawing.Point(345, 8);
-            this.lblItemPrice.Name = "lblItemPrice";
-            this.lblItemPrice.Size = new System.Drawing.Size(53, 24);
-            this.lblItemPrice.TabIndex = 5;
-            this.lblItemPrice.Text = "Price";
             // 
             // btnImport
             // 
@@ -155,23 +105,62 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(83)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(449, 464);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 35);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Import";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(787, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addItemToolStripMenuItem});
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.newToolStripMenuItem.Text = "New";
+            // 
+            // addItemToolStripMenuItem
+            // 
+            this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
+            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addItemToolStripMenuItem.Text = "Add Item";
+            this.addItemToolStripMenuItem.Click += new System.EventHandler(this.addItemToolStripMenuItem_Click);
+            // 
             // ResturentPOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 503);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnImport);
-            this.Controls.Add(this.lblItemPrice);
-            this.Controls.Add(this.lblItemName);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtItemPrice);
-            this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.menuGrid);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "ResturentPOS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resurent Point of Sale";
             ((System.ComponentModel.ISupportInitialize)(this.menuGrid)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,13 +172,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemPrice;
-        private System.Windows.Forms.TextBox txtItemName;
-        private System.Windows.Forms.TextBox txtItemPrice;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Label lblItemName;
-        private System.Windows.Forms.Label lblItemPrice;
         private System.Windows.Forms.Button btnImport;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addItemToolStripMenuItem;
     }
 }
 
