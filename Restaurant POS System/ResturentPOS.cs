@@ -105,6 +105,15 @@ namespace Restaurant_POS_System
                 }
         }
 
+        public void addItemToGrid(Item item)
+        {
+            int count = menuGrid.Rows.Count - 1;
+            menuGrid.Rows.Add();
+            menuGrid.Rows[count].Cells[0].Value = count + 1;
+            menuGrid.Rows[count].Cells[1].Value = item.ItemName;
+            menuGrid.Rows[count].Cells[2].Value = item.ItemPrice;
+        }
+
         private void addItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddItem addForm = new AddItem();
