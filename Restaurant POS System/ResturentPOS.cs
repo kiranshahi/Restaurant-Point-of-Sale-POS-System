@@ -120,5 +120,17 @@ namespace Restaurant_POS_System
             addForm.IdentityUpdate += new AddItem.IdentityHandler(this.addItemToGrid);
             addForm.ShowDialog();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                menuGrid.Rows.RemoveAt(menuGrid.CurrentCell.RowIndex);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong while deleting menu item.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
