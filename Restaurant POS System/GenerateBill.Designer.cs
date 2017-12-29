@@ -60,7 +60,7 @@
             // txtQuantity
             // 
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(332, 50);
+            this.txtQuantity.Location = new System.Drawing.Point(325, 50);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(300, 26);
             this.txtQuantity.TabIndex = 1;
@@ -79,7 +79,7 @@
             // 
             this.lblItemQuantity.AutoSize = true;
             this.lblItemQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemQuantity.Location = new System.Drawing.Point(328, 23);
+            this.lblItemQuantity.Location = new System.Drawing.Point(321, 23);
             this.lblItemQuantity.Name = "lblItemQuantity";
             this.lblItemQuantity.Size = new System.Drawing.Size(118, 24);
             this.lblItemQuantity.TabIndex = 2;
@@ -99,7 +99,7 @@
             this.salesItemGrid.Location = new System.Drawing.Point(0, 0);
             this.salesItemGrid.Name = "salesItemGrid";
             this.salesItemGrid.RowHeadersVisible = false;
-            this.salesItemGrid.Size = new System.Drawing.Size(784, 365);
+            this.salesItemGrid.Size = new System.Drawing.Size(782, 365);
             this.salesItemGrid.TabIndex = 3;
             // 
             // sn
@@ -138,7 +138,7 @@
             this.gridpanel.Controls.Add(this.salesItemGrid);
             this.gridpanel.Location = new System.Drawing.Point(2, 83);
             this.gridpanel.Name = "gridpanel";
-            this.gridpanel.Size = new System.Drawing.Size(784, 365);
+            this.gridpanel.Size = new System.Drawing.Size(782, 365);
             this.gridpanel.TabIndex = 4;
             // 
             // btnAddToBill
@@ -149,7 +149,7 @@
             this.btnAddToBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddToBill.ForeColor = System.Drawing.Color.White;
-            this.btnAddToBill.Location = new System.Drawing.Point(646, 50);
+            this.btnAddToBill.Location = new System.Drawing.Point(636, 50);
             this.btnAddToBill.Name = "btnAddToBill";
             this.btnAddToBill.Size = new System.Drawing.Size(139, 28);
             this.btnAddToBill.TabIndex = 2;
@@ -185,7 +185,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(646, 456);
+            this.btnSave.Location = new System.Drawing.Point(636, 456);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(139, 28);
             this.btnSave.TabIndex = 7;
@@ -198,6 +198,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 503);
+            this.ControlBox = false;
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblTotalAmount);
             this.Controls.Add(this.lblTotalLable);

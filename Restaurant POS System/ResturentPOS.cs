@@ -179,5 +179,19 @@ namespace Restaurant_POS_System
             GenerateBill billObj = new GenerateBill(itemList);
             billObj.Show();
         }
+
+        private void salesChartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SalesData salesDataForm = new SalesData();
+            salesDataForm.Show();
+        }
+
+        private void salesChartToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            SalesData salesData = new SalesData();
+
+            SalesChart salesChartForm = new SalesChart();
+            salesChartForm.Show();
+        }
     }
 }

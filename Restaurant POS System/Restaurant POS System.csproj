@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,6 +69,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sales.cs" />
+    <Compile Include="SalesChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesChart.Designer.cs">
+      <DependentUpon>SalesChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesData.Designer.cs">
+      <DependentUpon>SalesData.cs</DependentUpon>
+    </Compile>
     <Compile Include="SalesReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +105,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SalesChart.resx">
+      <DependentUpon>SalesChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesData.resx">
+      <DependentUpon>SalesData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SalesReport.resx">
       <DependentUpon>SalesReport.cs</DependentUpon>
     </EmbeddedResource>

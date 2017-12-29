@@ -29,7 +29,7 @@ namespace Restaurant_POS_System
             }
             else
             {
-                MessageBox.Show("You have entered invalid input.", "Error !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You have entered invalid input.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
