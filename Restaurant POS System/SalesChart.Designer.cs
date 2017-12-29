@@ -37,6 +37,7 @@
             // 
             // salesPieChart
             // 
+            this.salesPieChart.AllowDrop = true;
             chartArea1.Name = "ChartArea1";
             this.salesPieChart.ChartAreas.Add(chartArea1);
             this.salesPieChart.Cursor = System.Windows.Forms.Cursors.Default;
