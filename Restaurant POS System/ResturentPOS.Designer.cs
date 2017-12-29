@@ -42,9 +42,6 @@
             this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.salesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salesChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salesChartToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuGrid)).BeginInit();
@@ -55,8 +52,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
-            this.generateBillToolStripMenuItem,
-            this.salesReportToolStripMenuItem});
+            this.generateBillToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(787, 24);
@@ -76,21 +72,21 @@
             // addItemToolStripMenuItem
             // 
             this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
-            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addItemToolStripMenuItem.Text = "New Item";
             this.addItemToolStripMenuItem.Click += new System.EventHandler(this.addItemToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.closeToolStripMenuItem.Text = "Import CSV";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem1
             // 
             this.closeToolStripMenuItem1.Name = "closeToolStripMenuItem1";
-            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
+            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.closeToolStripMenuItem1.Text = "Close";
             this.closeToolStripMenuItem1.Click += new System.EventHandler(this.closeToolStripMenuItem1_Click);
             // 
@@ -184,29 +180,6 @@
             this.mainPanel.Size = new System.Drawing.Size(787, 479);
             this.mainPanel.TabIndex = 10;
             // 
-            // salesReportToolStripMenuItem
-            // 
-            this.salesReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salesChartToolStripMenuItem,
-            this.salesChartToolStripMenuItem1});
-            this.salesReportToolStripMenuItem.Name = "salesReportToolStripMenuItem";
-            this.salesReportToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
-            this.salesReportToolStripMenuItem.Text = "Sales Report";
-            // 
-            // salesChartToolStripMenuItem
-            // 
-            this.salesChartToolStripMenuItem.Name = "salesChartToolStripMenuItem";
-            this.salesChartToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.salesChartToolStripMenuItem.Text = "Sales Data";
-            this.salesChartToolStripMenuItem.Click += new System.EventHandler(this.salesChartToolStripMenuItem_Click);
-            // 
-            // salesChartToolStripMenuItem1
-            // 
-            this.salesChartToolStripMenuItem1.Name = "salesChartToolStripMenuItem1";
-            this.salesChartToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.salesChartToolStripMenuItem1.Text = "Sales Chart";
-            this.salesChartToolStripMenuItem1.Click += new System.EventHandler(this.salesChartToolStripMenuItem1_Click);
-            // 
             // ResturentPOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,9 +217,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemPrice;
         private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.ToolStripMenuItem salesReportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salesChartToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salesChartToolStripMenuItem1;
     }
 }
 
