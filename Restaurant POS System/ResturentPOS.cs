@@ -13,7 +13,7 @@ namespace Restaurant_POS_System
             InitializeComponent();
         }
 
-        private void importData()
+        private void ImportData()
         {
             using (OpenFileDialog openDialog = new OpenFileDialog()
             {
@@ -99,7 +99,7 @@ namespace Restaurant_POS_System
                 }
         }
 
-        public void addItemToGrid(object sender, IdentityEventArgs e)
+        public void AddItemToGrid(object sender, IdentityEventArgs e)
         {
             int count = menuGrid.Rows.Count - 1;
             menuGrid.Rows.Add();
@@ -108,14 +108,14 @@ namespace Restaurant_POS_System
             menuGrid.Rows[count].Cells[2].Value = e.item.ItemPrice;
         }
 
-        private void addItemToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddItem addForm = new AddItem();
-            addForm.IdentityUpdate += new AddItem.IdentityHandler(this.addItemToGrid);
+            addForm.IdentityUpdate += new AddItem.IdentityHandler(this.AddItemToGrid);
             addForm.ShowDialog();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             try
             {
@@ -127,7 +127,7 @@ namespace Restaurant_POS_System
             }
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
             try
             {
@@ -138,7 +138,7 @@ namespace Restaurant_POS_System
 
                 AddItem addItem = new AddItem();
                 addItem.loadData(itemObj);
-                addItem.IdentityUpdate += new AddItem.IdentityHandler(this.updateMenu);
+                addItem.IdentityUpdate += new AddItem.IdentityHandler(this.UpdateMenu);
                 addItem.Show();
             }
             catch (Exception ex)
@@ -146,13 +146,13 @@ namespace Restaurant_POS_System
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void updateMenu(object sender, IdentityEventArgs e)
+        public void UpdateMenu(object sender, IdentityEventArgs e)
         {
             menuGrid.Rows[row].Cells[1].Value = e.item.ItemName;
             menuGrid.Rows[row].Cells[2].Value = e.item.ItemPrice;
         }
 
-        private void closeToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void CloseToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("You are about to close the system. Do you want to close?", "Resturent POS System", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -160,12 +160,20 @@ namespace Restaurant_POS_System
             }
         }
 
-        private void importToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ImportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            importData();
+            ImportData();
         }
 
-        private void generateBillToolStripMenuItem_Click(object sender, EventArgs e)
+        private void GenerateBillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<Item> itemList = GenerateListFromGrid();
+
+            GenerateBill billObj = new GenerateBill(itemList);
+            billObj.Show();
+        }
+
+        private List<Item> GenerateListFromGrid()
         {
             List<Item> itemList = new List<Item>();
             for (int i = 0; i < menuGrid.Rows.Count - 1; i++)
@@ -175,10 +183,101 @@ namespace Restaurant_POS_System
                 decimal ItemPrice = Convert.ToDecimal(menuGrid.Rows[i].Cells[2].Value);
                 itemList.Add(new Item() { SN = SN, ItemName = ItemName, ItemPrice = ItemPrice });
             }
-
-            GenerateBill billObj = new GenerateBill(itemList);
-            billObj.Show();
+            return itemList;
         }
-        
+
+        private void ListToGrid(List<Item> itemList)
+        {
+            for (int i = 0; i < itemList.Count; i++)
+            {
+                menuGrid.Rows[i].Cells[0].Value = i + 1;
+                menuGrid.Rows[i].Cells[1].Value = itemList[i].ItemName;
+                menuGrid.Rows[i].Cells[2].Value = itemList[i].ItemPrice;
+            }
+        }
+
+        private void ItemAscendingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool sorted = false;
+            List<Item> itemList = GenerateListFromGrid();
+            while (!sorted)
+            {
+                sorted = true;
+                for (int i = 0; i < itemList.Count - 1; i++)
+                {
+                    if (String.Compare(itemList[i].ItemName, itemList[i + 1].ItemName) > 0)
+                    {
+                        sorted = false;
+                        Item tempItem = itemList[i];
+                        itemList[i] = itemList[i + 1];
+                        itemList[i + 1] = tempItem;
+                    }
+                }
+            }
+            ListToGrid(itemList);
+        }
+
+        private void ItemDescendingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool sorted = false;
+            List<Item> itemList = GenerateListFromGrid();
+            while (!sorted)
+            {
+                sorted = true;
+                for (int i = 0; i < itemList.Count - 1; i++)
+                {
+                    if (String.Compare(itemList[i].ItemName, itemList[i + 1].ItemName) < 0)
+                    {
+                        sorted = false;
+                        Item tempItem = itemList[i];
+                        itemList[i] = itemList[i + 1];
+                        itemList[i + 1] = tempItem;
+                    }
+                }
+            }
+            ListToGrid(itemList);
+        }
+
+        private void PriceAscendingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool sorted = false;
+            List<Item> itemList = GenerateListFromGrid();
+            while (!sorted)
+            {
+                sorted = true;
+                for (int i = 0; i < itemList.Count - 1; i++)
+                {
+                    if (itemList[i].ItemPrice > itemList[i + 1].ItemPrice)
+                    {
+                        sorted = false;
+                        Item tempItem = itemList[i];
+                        itemList[i] = itemList[i + 1];
+                        itemList[i + 1] = tempItem;
+                    }
+                }
+            }
+            ListToGrid(itemList);
+        }
+
+        private void PriceDescendingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool sorted = false;
+            List<Item> itemList = GenerateListFromGrid();
+            while (!sorted)
+            {
+                sorted = true;
+                for (int i = 0; i < itemList.Count - 1; i++)
+                {
+                    if (itemList[i].ItemPrice < itemList[i + 1].ItemPrice)
+                    {
+                        sorted = false;
+                        Item tempItem = itemList[i];
+                        itemList[i] = itemList[i + 1];
+                        itemList[i + 1] = tempItem;
+                    }
+                }
+            }
+            ListToGrid(itemList);
+        }
     }
 }

@@ -42,6 +42,11 @@
             this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.sortMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemAscendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemDescendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.priceAscendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.priceDescendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuGrid)).BeginInit();
@@ -52,7 +57,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
-            this.generateBillToolStripMenuItem});
+            this.generateBillToolStripMenuItem,
+            this.sortMenuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(787, 24);
@@ -74,28 +80,28 @@
             this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
             this.addItemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addItemToolStripMenuItem.Text = "New Item";
-            this.addItemToolStripMenuItem.Click += new System.EventHandler(this.addItemToolStripMenuItem_Click);
+            this.addItemToolStripMenuItem.Click += new System.EventHandler(this.AddItemToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.closeToolStripMenuItem.Text = "Import CSV";
-            this.closeToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.ImportToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem1
             // 
             this.closeToolStripMenuItem1.Name = "closeToolStripMenuItem1";
             this.closeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.closeToolStripMenuItem1.Text = "Close";
-            this.closeToolStripMenuItem1.Click += new System.EventHandler(this.closeToolStripMenuItem1_Click);
+            this.closeToolStripMenuItem1.Click += new System.EventHandler(this.CloseToolStripMenuItem1_Click);
             // 
             // generateBillToolStripMenuItem
             // 
             this.generateBillToolStripMenuItem.Name = "generateBillToolStripMenuItem";
             this.generateBillToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.generateBillToolStripMenuItem.Text = "Generate Bill";
-            this.generateBillToolStripMenuItem.Click += new System.EventHandler(this.generateBillToolStripMenuItem_Click);
+            this.generateBillToolStripMenuItem.Click += new System.EventHandler(this.GenerateBillToolStripMenuItem_Click);
             // 
             // btnDelete
             // 
@@ -111,7 +117,7 @@
             this.btnDelete.TabIndex = 15;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnEdit
             // 
@@ -126,7 +132,7 @@
             this.btnEdit.TabIndex = 16;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // panel2
             // 
@@ -180,6 +186,45 @@
             this.mainPanel.Size = new System.Drawing.Size(787, 479);
             this.mainPanel.TabIndex = 10;
             // 
+            // sortMenuToolStripMenuItem
+            // 
+            this.sortMenuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.itemAscendingToolStripMenuItem,
+            this.itemDescendingToolStripMenuItem,
+            this.priceAscendingToolStripMenuItem,
+            this.priceDescendingToolStripMenuItem});
+            this.sortMenuToolStripMenuItem.Name = "sortMenuToolStripMenuItem";
+            this.sortMenuToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.sortMenuToolStripMenuItem.Text = "Sort Menu";
+            // 
+            // itemAscendingToolStripMenuItem
+            // 
+            this.itemAscendingToolStripMenuItem.Name = "itemAscendingToolStripMenuItem";
+            this.itemAscendingToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.itemAscendingToolStripMenuItem.Text = "Item Ascending";
+            this.itemAscendingToolStripMenuItem.Click += new System.EventHandler(this.ItemAscendingToolStripMenuItem_Click);
+            // 
+            // itemDescendingToolStripMenuItem
+            // 
+            this.itemDescendingToolStripMenuItem.Name = "itemDescendingToolStripMenuItem";
+            this.itemDescendingToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.itemDescendingToolStripMenuItem.Text = "Item Descending";
+            this.itemDescendingToolStripMenuItem.Click += new System.EventHandler(this.ItemDescendingToolStripMenuItem_Click);
+            // 
+            // priceAscendingToolStripMenuItem
+            // 
+            this.priceAscendingToolStripMenuItem.Name = "priceAscendingToolStripMenuItem";
+            this.priceAscendingToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.priceAscendingToolStripMenuItem.Text = "Price Ascending";
+            this.priceAscendingToolStripMenuItem.Click += new System.EventHandler(this.PriceAscendingToolStripMenuItem_Click);
+            // 
+            // priceDescendingToolStripMenuItem
+            // 
+            this.priceDescendingToolStripMenuItem.Name = "priceDescendingToolStripMenuItem";
+            this.priceDescendingToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.priceDescendingToolStripMenuItem.Text = "Price Descending";
+            this.priceDescendingToolStripMenuItem.Click += new System.EventHandler(this.PriceDescendingToolStripMenuItem_Click);
+            // 
             // ResturentPOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,6 +262,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemPrice;
         private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.ToolStripMenuItem sortMenuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem itemAscendingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem itemDescendingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem priceAscendingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem priceDescendingToolStripMenuItem;
     }
 }
 
