@@ -75,12 +75,6 @@
     <Compile Include="SalesChart.Designer.cs">
       <DependentUpon>SalesChart.cs</DependentUpon>
     </Compile>
-    <Compile Include="SalesData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SalesData.Designer.cs">
-      <DependentUpon>SalesData.cs</DependentUpon>
-    </Compile>
     <Compile Include="SalesReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,9 +101,6 @@
     </Compile>
     <EmbeddedResource Include="SalesChart.resx">
       <DependentUpon>SalesChart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SalesData.resx">
-      <DependentUpon>SalesData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SalesReport.resx">
       <DependentUpon>SalesReport.cs</DependentUpon>
