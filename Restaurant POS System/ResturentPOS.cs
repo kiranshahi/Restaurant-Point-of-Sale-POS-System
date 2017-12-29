@@ -188,10 +188,10 @@ namespace Restaurant_POS_System
 
         private void salesChartToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            SalesData salesData = new SalesData();
+            //SalesData salesData = new SalesData();
 
-            SalesChart salesChartForm = new SalesChart();
-            salesChartForm.Show();
+            //SalesChart salesChartForm = new SalesChart();
+            //salesChartForm.Show();
         }
     }
 }

@@ -42,7 +42,7 @@
             this.btnAddToBill = new System.Windows.Forms.Button();
             this.lblTotalLable = new System.Windows.Forms.Label();
             this.lblTotalAmount = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnGenerateChart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.salesItemGrid)).BeginInit();
             this.gridpanel.SuspendLayout();
             this.SuspendLayout();
@@ -177,21 +177,21 @@
             this.lblTotalAmount.TabIndex = 6;
             this.lblTotalAmount.Text = "0.0";
             // 
-            // btnSave
+            // btnGenerateChart
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(83)))));
-            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(636, 456);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(139, 28);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "Save Sales";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnGenerateChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(83)))));
+            this.btnGenerateChart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnGenerateChart.FlatAppearance.BorderSize = 0;
+            this.btnGenerateChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerateChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateChart.ForeColor = System.Drawing.Color.White;
+            this.btnGenerateChart.Location = new System.Drawing.Point(636, 456);
+            this.btnGenerateChart.Name = "btnGenerateChart";
+            this.btnGenerateChart.Size = new System.Drawing.Size(139, 28);
+            this.btnGenerateChart.TabIndex = 7;
+            this.btnGenerateChart.Text = "Generate Chart";
+            this.btnGenerateChart.UseVisualStyleBackColor = false;
+            this.btnGenerateChart.Click += new System.EventHandler(this.btnGenerateChart_Click);
             // 
             // GenerateBill
             // 
@@ -199,7 +199,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 503);
             this.ControlBox = false;
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnGenerateChart);
             this.Controls.Add(this.lblTotalAmount);
             this.Controls.Add(this.lblTotalLable);
             this.Controls.Add(this.btnAddToBill);
@@ -234,6 +234,6 @@
         private System.Windows.Forms.Button btnAddToBill;
         private System.Windows.Forms.Label lblTotalLable;
         private System.Windows.Forms.Label lblTotalAmount;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnGenerateChart;
     }
 }

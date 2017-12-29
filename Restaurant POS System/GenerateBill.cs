@@ -59,10 +59,10 @@ namespace Restaurant_POS_System
 
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnGenerateChart_Click(object sender, EventArgs e)
         {
             List<Sales> salesList = new List<Sales>();
-            for (int i = 0; i < salesItemGrid.Rows.Count -1; i++)
+            for (int i = 0; i < salesItemGrid.Rows.Count - 1; i++)
             {
 
                 int sn = Convert.ToInt32(salesItemGrid.Rows[i].Cells[0].Value);
@@ -70,9 +70,8 @@ namespace Restaurant_POS_System
                 int quantity = Convert.ToInt32(salesItemGrid.Rows[i].Cells[3].Value);
                 salesList.Add(new Sales() { SN = sn, ItemName = itemName, Quantity = quantity });
             }
-            SalesReport salesReport = new SalesReport();
-            salesReport.addSalesToGrid(salesList);
-
+            SalesChart salesChart = new SalesChart(salesList);
+            salesChart.Show();
             this.Close();
         }
     }
