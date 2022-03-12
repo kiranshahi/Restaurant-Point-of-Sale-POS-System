@@ -51,27 +51,30 @@
             // 
             this.cbItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbItem.FormattingEnabled = true;
-            this.cbItem.ItemHeight = 20;
-            this.cbItem.Location = new System.Drawing.Point(2, 50);
+            this.cbItem.ItemHeight = 25;
+            this.cbItem.Location = new System.Drawing.Point(3, 62);
+            this.cbItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbItem.Name = "cbItem";
-            this.cbItem.Size = new System.Drawing.Size(308, 28);
+            this.cbItem.Size = new System.Drawing.Size(409, 33);
             this.cbItem.TabIndex = 0;
             // 
             // txtQuantity
             // 
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(325, 50);
+            this.txtQuantity.Location = new System.Drawing.Point(433, 62);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(300, 26);
+            this.txtQuantity.Size = new System.Drawing.Size(399, 30);
             this.txtQuantity.TabIndex = 1;
             // 
             // lblItem
             // 
             this.lblItem.AutoSize = true;
             this.lblItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItem.Location = new System.Drawing.Point(3, 23);
+            this.lblItem.Location = new System.Drawing.Point(4, 28);
+            this.lblItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItem.Name = "lblItem";
-            this.lblItem.Size = new System.Drawing.Size(101, 24);
+            this.lblItem.Size = new System.Drawing.Size(130, 29);
             this.lblItem.TabIndex = 2;
             this.lblItem.Text = "Item Name";
             // 
@@ -79,9 +82,10 @@
             // 
             this.lblItemQuantity.AutoSize = true;
             this.lblItemQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemQuantity.Location = new System.Drawing.Point(321, 23);
+            this.lblItemQuantity.Location = new System.Drawing.Point(428, 28);
+            this.lblItemQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItemQuantity.Name = "lblItemQuantity";
-            this.lblItemQuantity.Size = new System.Drawing.Size(118, 24);
+            this.lblItemQuantity.Size = new System.Drawing.Size(152, 29);
             this.lblItemQuantity.TabIndex = 2;
             this.lblItemQuantity.Text = "Item Quantity";
             // 
@@ -97,15 +101,18 @@
             this.itemTotal});
             this.salesItemGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.salesItemGrid.Location = new System.Drawing.Point(0, 0);
+            this.salesItemGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salesItemGrid.Name = "salesItemGrid";
             this.salesItemGrid.RowHeadersVisible = false;
-            this.salesItemGrid.Size = new System.Drawing.Size(782, 365);
+            this.salesItemGrid.RowHeadersWidth = 51;
+            this.salesItemGrid.Size = new System.Drawing.Size(1043, 449);
             this.salesItemGrid.TabIndex = 3;
             // 
             // sn
             // 
             this.sn.FillWeight = 50F;
             this.sn.HeaderText = "SN";
+            this.sn.MinimumWidth = 6;
             this.sn.Name = "sn";
             this.sn.Width = 50;
             // 
@@ -113,32 +120,37 @@
             // 
             this.itemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.itemName.HeaderText = "Item Name";
+            this.itemName.MinimumWidth = 6;
             this.itemName.Name = "itemName";
             // 
             // itemRate
             // 
             this.itemRate.HeaderText = "Rate";
+            this.itemRate.MinimumWidth = 6;
             this.itemRate.Name = "itemRate";
             this.itemRate.Width = 150;
             // 
             // itemQuantity
             // 
             this.itemQuantity.HeaderText = "Quantity";
+            this.itemQuantity.MinimumWidth = 6;
             this.itemQuantity.Name = "itemQuantity";
             this.itemQuantity.Width = 150;
             // 
             // itemTotal
             // 
             this.itemTotal.HeaderText = "Total";
+            this.itemTotal.MinimumWidth = 6;
             this.itemTotal.Name = "itemTotal";
             this.itemTotal.Width = 150;
             // 
             // gridpanel
             // 
             this.gridpanel.Controls.Add(this.salesItemGrid);
-            this.gridpanel.Location = new System.Drawing.Point(2, 83);
+            this.gridpanel.Location = new System.Drawing.Point(3, 102);
+            this.gridpanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridpanel.Name = "gridpanel";
-            this.gridpanel.Size = new System.Drawing.Size(782, 365);
+            this.gridpanel.Size = new System.Drawing.Size(1043, 449);
             this.gridpanel.TabIndex = 4;
             // 
             // btnAddToBill
@@ -149,9 +161,10 @@
             this.btnAddToBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddToBill.ForeColor = System.Drawing.Color.White;
-            this.btnAddToBill.Location = new System.Drawing.Point(636, 50);
+            this.btnAddToBill.Location = new System.Drawing.Point(848, 62);
+            this.btnAddToBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddToBill.Name = "btnAddToBill";
-            this.btnAddToBill.Size = new System.Drawing.Size(139, 28);
+            this.btnAddToBill.Size = new System.Drawing.Size(185, 34);
             this.btnAddToBill.TabIndex = 2;
             this.btnAddToBill.Text = "Add Item";
             this.btnAddToBill.UseVisualStyleBackColor = false;
@@ -161,9 +174,10 @@
             // 
             this.lblTotalLable.AutoSize = true;
             this.lblTotalLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalLable.Location = new System.Drawing.Point(12, 460);
+            this.lblTotalLable.Location = new System.Drawing.Point(16, 566);
+            this.lblTotalLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalLable.Name = "lblTotalLable";
-            this.lblTotalLable.Size = new System.Drawing.Size(127, 24);
+            this.lblTotalLable.Size = new System.Drawing.Size(161, 29);
             this.lblTotalLable.TabIndex = 6;
             this.lblTotalLable.Text = "Total Amount:";
             // 
@@ -171,9 +185,10 @@
             // 
             this.lblTotalAmount.AutoSize = true;
             this.lblTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAmount.Location = new System.Drawing.Point(145, 460);
+            this.lblTotalAmount.Location = new System.Drawing.Point(193, 566);
+            this.lblTotalAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(35, 24);
+            this.lblTotalAmount.Size = new System.Drawing.Size(45, 29);
             this.lblTotalAmount.TabIndex = 6;
             this.lblTotalAmount.Text = "0.0";
             // 
@@ -185,9 +200,10 @@
             this.btnGenerateChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerateChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateChart.ForeColor = System.Drawing.Color.White;
-            this.btnGenerateChart.Location = new System.Drawing.Point(636, 456);
+            this.btnGenerateChart.Location = new System.Drawing.Point(848, 561);
+            this.btnGenerateChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGenerateChart.Name = "btnGenerateChart";
-            this.btnGenerateChart.Size = new System.Drawing.Size(139, 28);
+            this.btnGenerateChart.Size = new System.Drawing.Size(185, 34);
             this.btnGenerateChart.TabIndex = 7;
             this.btnGenerateChart.Text = "Generate Chart";
             this.btnGenerateChart.UseVisualStyleBackColor = false;
@@ -195,10 +211,9 @@
             // 
             // GenerateBill
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 503);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(1049, 619);
             this.Controls.Add(this.btnGenerateChart);
             this.Controls.Add(this.lblTotalAmount);
             this.Controls.Add(this.lblTotalLable);
@@ -208,6 +223,7 @@
             this.Controls.Add(this.lblItem);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.cbItem);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GenerateBill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenerateBill";
