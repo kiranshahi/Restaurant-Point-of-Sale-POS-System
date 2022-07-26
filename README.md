@@ -15,12 +15,12 @@ We appreciate any contributions and are always welcome. Feel free to create [Pul
 
 
 #### Add Menu Item Form
-![Add Menu Item form of Restaurant Point of Sale (POS) System][homeScreen]
+![Add Menu Item form of Restaurant Point of Sale (POS) System][add-menu]
 
-[homeScreen]: https://github.com/kiranshahi/Restaurant-Point-of-Sale-POS-System/blob/master/Screenshots/add-menu-item.png "Add Menu Item Restaurant Point of Sale (POS) System"
+[add-menu]: https://github.com/kiranshahi/Restaurant-Point-of-Sale-POS-System/blob/master/Screenshots/add-menu-item.png "Add Menu Item Restaurant Point of Sale (POS) System"
 
 
 #### Generate Bill Form
-![Generate Bill Form of Restaurant Point of Sale (POS) System][homeScreen]
+![Generate Bill Form of Restaurant Point of Sale (POS) System][generate-bill]
 
-[homeScreen]: https://github.com/kiranshahi/Restaurant-Point-of-Sale-POS-System/blob/master/Screenshots/generate-bill.png "Generate Bill Form Restaurant Point of Sale (POS) System"
+[generate-bill]: https://github.com/kiranshahi/Restaurant-Point-of-Sale-POS-System/blob/master/Screenshots/generate-bill.png "Generate Bill Form Restaurant Point of Sale (POS) System"
